@@ -1,0 +1,36 @@
+Afeef KP
+MCA S3
+Roll No: 203
+TKMCE, KOLLAM
+
+
+#import libraries
+
+import pandas as pd
+import numpy as np
+import matplot.pyplot as plot
+from sklearn.preprocessing import StandardScaler
+
+#import dataset 
+
+
+dataset=pd.read_csv('IMDB Dataset.csv')
+
+
+
+ds=dataset.drop('review',axis=1)
+scaler=StandardScaler()
+
+x=scaler.fit_transform(ds.drop('sentiment',axis=1)
+y=ds['sentiment']
+
+from sklearn.model_selection import train_test_split
+XTRAIN,xtest,YTRAIN,ytest=train_test_split(x,y,test_size=0.2)
+
+from sklearn.naive_bayes import GausianNB
+	
+nb=GaussianNB()
+nb.fit(XTRAIN,YTRAIN)
+
+
+
